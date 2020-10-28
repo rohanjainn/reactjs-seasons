@@ -1,16 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import SeasonDisplay from './SeasonDisplay';
 
 
 class App extends React.Component{
 
-    constructor(props){
-        super(props);
-        
-        //this is only time we do direct assignment to this.state
-        this.state={lat:null,errorMessag:''};
-
-    }
+    state={lat:null,errorMessag:''};
 
     componentDidMount(){
       
@@ -22,7 +17,7 @@ class App extends React.Component{
 
     componentDidUpdate(){
 
-        
+    
     }
 
     //we have to define render
@@ -31,7 +26,7 @@ class App extends React.Component{
             return <div>Error : {this.state.errorMessag}</div>
         }
         else if(this.state.lat && !this.state.errorMessag){
-            return <div>Latitude :{this.state.lat}</div>
+            return <SeasonDisplay lat={this.state.lat}/>
         }
         else
             return<div>Loading!</div>

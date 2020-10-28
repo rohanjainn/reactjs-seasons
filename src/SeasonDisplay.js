@@ -13,7 +13,7 @@ const getSeason=(lat,month)=>{
     }
 }
 const SeasonDisplay=(props)=>{
-    console.log("inside SeasonDisplay")
+    console.log("inside ")
     console.log(props.lat)
     const season=getSeason(props.lat,new Date().getMonth());
 

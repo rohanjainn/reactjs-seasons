@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ScreenLoader from './ScreenLoader';
 import SeasonDisplay from './SeasonDisplay';
 
 
@@ -29,7 +30,7 @@ class App extends React.Component{
             return <SeasonDisplay lat={this.state.lat}/>
         }
         else
-            return<div>Loading!</div>
+            return <ScreenLoader message='Allow location access'/>
     }
 }
 

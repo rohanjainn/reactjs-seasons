@@ -21,8 +21,7 @@ class App extends React.Component{
     
     }
 
-    //we have to define render
-    render(){
+    renderContent(){
         if(this.state.errorMessag && !this.state.lat){
             return <div>Error : {this.state.errorMessag}</div>
         }
@@ -31,6 +30,15 @@ class App extends React.Component{
         }
         else
             return <ScreenLoader message='Allow location access'/>
+    }
+
+    //we have to define render
+    render(){
+        return (
+            <div className="border red">
+                {this.renderContent()}
+            </div>
+        )
     }
 }
 
